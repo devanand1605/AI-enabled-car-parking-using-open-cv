@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .login-container {
+            height: 100vh;
+            background: url('C:/Users/sanja/PycharmProjects/pythonProject/CarParkProject/back.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-form {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .login-form h1 {
+            text-align: center;
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .login-form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .login-form .form-control {
+            border-radius: 5px;
+        }
+
+        .login-form button[type="submit"] {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            animation: glow 1.5s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 5px #007bff;
+            }
+            50% {
+                box-shadow: 0 0 20px #007bff;
+            }
+            100% {
+                box-shadow: 0 0 5px #007bff;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="login-form">
+                        <h1>Welcome to Car Parking</h1>
+                        {% if error %}
+                            <div class="alert alert-danger">
+                                Invalid username or password. Please try again.
+                            </div>
+                        {% endif %}
+                        <form method="POST" action="/">
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

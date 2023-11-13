@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <style>
+        body {
+            background-image: url("background.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+            h1 {
+        color: #fff;
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+
+    .btn-click {
+        background-color: #ff7f00;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+        padding: 10px 40px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        box-shadow: 1px 2px 10px 5px #000000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .btn-click:hover {
+        background-color: #0056b3;
+        box-shadow: 0px 0px 20px 5px #007bff;
+    }
+
+    .btn-click span {
+        display: inline-block;
+        animation: pulse 2s infinite;
+        color: #000000;
+        margin-right: 0px;
+    }
+
+    .hand-sign {
+        position: absolute;
+        bottom: -50px;
+        right: 10px;
+        width: 40px;
+        height: auto;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(10);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+</style>
+</head>
+<body>
+    <h1>Welcome to the Dashboard!</h1>
+    <button class="btn-click" onclick="window.location.href='/execute_code'">
+        <span>Click Here to See Parking Lot</span>
+    </button>
+</body>
+</html>
